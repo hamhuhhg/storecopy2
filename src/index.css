@@ -1,0 +1,81 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 100% 99%;
+    --foreground: 20 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 15%;
+
+    --primary: 15 100% 59%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 150 55% 44%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 20 10% 96%;
+    --muted-foreground: 20 10% 45%;
+
+    --accent: 150 55% 94%;
+    --accent-foreground: 150 55% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 10% 90%;
+    --input: 20 10% 90%;
+    --ring: 15 100% 59%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Add special styling for food images */
+  .food-image {
+    @apply object-cover transition-all duration-300 hover:scale-105;
+  }
+
+  /* Add special styling for juice images */
+  .juice-image {
+    @apply object-cover transition-all duration-300 hover:scale-105;
+  }
+
+  /* Special card styling */
+  .menu-card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden;
+  }
+}
+
+/* Disable text selection for better mobile experience */
+@layer utilities {
+  .no-select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+}
